@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Java 8 特性介绍 | 小生博客</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="分享各类资源、教程、黑科技软件、工具等等">
+    
+    <link rel="preload" href="/assets/css/0.styles.6cd3b1be.css" as="style"><link rel="preload" href="/assets/js/app.0da10773.js" as="script"><link rel="preload" href="/assets/js/2.3dac7f52.js" as="script"><link rel="preload" href="/assets/js/8.4b131072.js" as="script"><link rel="prefetch" href="/assets/js/10.beec82c8.js"><link rel="prefetch" href="/assets/js/11.25dac484.js"><link rel="prefetch" href="/assets/js/12.89321552.js"><link rel="prefetch" href="/assets/js/3.621e4f5b.js"><link rel="prefetch" href="/assets/js/4.f76b562a.js"><link rel="prefetch" href="/assets/js/5.d77d94cd.js"><link rel="prefetch" href="/assets/js/6.a2fec231.js"><link rel="prefetch" href="/assets/js/7.10d63deb.js"><link rel="prefetch" href="/assets/js/9.f0b3be53.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6cd3b1be.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小生博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Java资源</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/java/Spring.html" class="sidebar-link">Spring Framework</a></li><li><a href="/java/线程池.html" class="sidebar-link">Java线程池</a></li><li><a href="/java/Java8.html" aria-current="page" class="active sidebar-link">Java 8 特性介绍</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/java/Java8.html#lambda-表达式" class="sidebar-link">Lambda 表达式</a></li></ul></li><li><a href="/java/动态代理.html" class="sidebar-link">Java动态代理</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据库资源</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="java-8-特性介绍"><a href="#java-8-特性介绍" class="header-anchor">#</a> Java 8 特性介绍</h1> <h2 id="lambda-表达式"><a href="#lambda-表达式" class="header-anchor">#</a> Lambda 表达式</h2> <p>Lambda 表达式是 Java 8 中最受欢迎的特性之一。它允许你以更简洁的方式编写代码，尤其是对于只包含单个方法的接口的实现，比如函数式接口。</p> <p>下面是一个 Lambda 表达式的示例：</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">MyInterface</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyLambdaTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">MyInterface</span> myLambda <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> result <span class="token operator">=</span> myLambda<span class="token punctuation">.</span><span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Result: &quot;</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+输出：
+
+makefile
+<span class="token class-name">Copy</span> code
+<span class="token class-name">Result</span><span class="token operator">:</span> <span class="token number">5</span>
+<span class="token class-name">Stream</span> <span class="token constant">API</span>
+<span class="token class-name">Java</span> <span class="token number">8</span> 中引入了 <span class="token class-name">Stream</span> <span class="token constant">API</span>，使得对集合的操作变得更加简单和易读。使用 <span class="token class-name">Stream</span> <span class="token constant">API</span> 可以方便地进行筛选、排序、聚合等操作。
+
+下面是一个 <span class="token class-name">Stream</span> <span class="token constant">API</span> 的示例：
+
+java
+<span class="token class-name">Copy</span> code
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">&quot;apple&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;banana&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;orange&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;pear&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;peach&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> result <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>str <span class="token operator">-&gt;</span> str<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token string">&quot;p&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">sorted</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Result: &quot;</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+输出：
+
+makefile
+<span class="token class-name">Copy</span> code
+<span class="token class-name">Result</span><span class="token operator">:</span> <span class="token punctuation">[</span>peach<span class="token punctuation">,</span> pear<span class="token punctuation">]</span>
+<span class="token class-name">Optional</span> 类
+在 <span class="token class-name">Java</span> <span class="token number">8</span> 中，<span class="token class-name">Optional</span> 类被引入以解决可能出现的 <span class="token keyword">null</span> 值问题。使用 <span class="token class-name">Optional</span> 类可以让代码更加健壮和安全。
+
+下面是一个 <span class="token class-name">Optional</span> 类的示例：
+
+java
+<span class="token class-name">Copy</span> code
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyOptionalTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> str <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> optional <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">ofNullable</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> result <span class="token operator">=</span> optional<span class="token punctuation">.</span><span class="token function">orElse</span><span class="token punctuation">(</span><span class="token string">&quot;default&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Result: &quot;</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+输出：
+
+sql
+<span class="token class-name">Copy</span> code
+<span class="token class-name">Result</span><span class="token operator">:</span> <span class="token keyword">default</span>
+以上就是 <span class="token class-name">Java</span> <span class="token number">8</span> 中一些重要的特性，它们的出现使得 <span class="token class-name">Java</span> 编程变得更加简单和便捷。
+
+<span class="token class-name">Copy</span> co
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/java/线程池.html" class="prev">
+        Java线程池
+      </a></span> <span class="next"><a href="/java/动态代理.html">
+        Java动态代理
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0da10773.js" defer></script><script src="/assets/js/2.3dac7f52.js" defer></script><script src="/assets/js/8.4b131072.js" defer></script>
+  </body>
+</html>
