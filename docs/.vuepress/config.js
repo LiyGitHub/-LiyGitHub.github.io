@@ -3,6 +3,9 @@ module.exports = {
     base: "/",
     title: "小生博客",
     description: "分享各类资源、教程、黑科技软件、工具等等",
+    head: [
+        ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ],
     // theme : 'reco',
     markdown: {
         lineNumbers: true,
