@@ -7,8 +7,8 @@ hero:
   text: "Kelp Blog"
   tagline: 整理笔记，分享知识
   image:
-    src: /logo.png
-    alt: Kelp Blog
+    src: '/logo.png'
+    alt: 'Kelp Blog'
   actions:
     - theme: brand
       text: 开始阅读
