@@ -14,6 +14,7 @@ git add -A
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
+# 将保存的token复制到@github前面就可以执行脚本进行部署了
 git push -f https://@github.com/LiyGitHub/LiyGitHub.github.io.git main:gh-pages
 
 cd -
