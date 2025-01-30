@@ -1,0 +1,1 @@
+import{_ as l,c as i,ae as e,o as t}from"./chunks/framework.qVOFP1fh.js";const p=JSON.parse('{"title":"程序员的自我介绍","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),r={name:"README.md"};function o(n,a,h,d,s,u){return t(),i("div",null,a[0]||(a[0]=[e("",18)]))}const _=l(r,[["render",o]]);export{p as __pageData,_ as default};
