@@ -14,6 +14,7 @@ export default defineConfig({
     sidebar: [
       {
         text: 'java',
+        collapsed: false,
         items: [
           { text: '类加载', link: '/java/类加载' },
           { text: '线程池', link: '/java/线程池' },
@@ -23,8 +24,14 @@ export default defineConfig({
       },
       {
         text: 'mysql',
+        collapsed: false,
         items: [
           { text: '数据库', link: '/mysql/数据库' }
+        ]
+      },
+      {
+        items: [
+          { text: '关于我', link: 'README' }
         ]
       }
     ],

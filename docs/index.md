@@ -15,7 +15,7 @@ hero:
       link: /java/类加载
     - theme: alt
       text: 关于我
-      link: /mysql/数据库
+      link: /README
 
 features:
   - icon: 🚌
